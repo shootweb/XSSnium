@@ -65,7 +65,7 @@ def process_combination(driver, target_url, modifier, data_line, processed_combi
         return None
 
 if len(sys.argv) != 3:
-    logging.error("Usage: python script.py <target_urls_file_path> <data_file_path>")
+    logging.error("Usage: python script.py <target_urls_file_path> <payload_file_path>")
     sys.exit(1)
 
 target_urls_file = sys.argv[1]

@@ -11,6 +11,8 @@ The script takes a text file containing a list of XSS payloads and combines them
 
 The script will then generate requests to `https://example.com?example=<script>alert('XSS')</script>` using both GET and POST methods. This approach allows you to automate the testing of multiple payloads across different URLs, potentially uncovering XSS vulnerabilities.
 
+You will be sending `N°_of_Payloads x N°_of_URLS x 2` requests in total (the x2 is because it sends both GET and POST).
+
 ## Requirements
 - `Selenium`
 - `chromedriver` (ensure it matches your Chrome version)

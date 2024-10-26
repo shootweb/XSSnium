@@ -9,9 +9,9 @@ The script takes a text file containing a list of XSS payloads and combines them
 - A file named `payloads.txt` with a payload like `<script>alert('XSS')</script>`
 - A file named `URL.txt` containing `https://example.com?example=`
 
-The script will then generate requests to `https://example.com?example=<script>alert('XSS')</script>` using both GET and POST methods. This approach allows you to automate the testing of multiple payloads across different URLs, potentially uncovering XSS vulnerabilities.
+The script will then generate requests to `https://example.com?example=<script>alert('XSS')</script>` using both GET and POST methods, and also retries the payloads while adding "> symbols as prefix. This approach allows you to automate the testing of multiple payloads across different URLs, potentially uncovering XSS vulnerabilities.
 
-You will be sending `N°_of_Payloads x N°_of_URLS x 2` requests in total (the x2 is because it sends both GET and POST).
+You will be sending `N°_of_Payloads x N°_of_URLS x 2 x 2` requests in total (first x2 is for GET and POST, the other is the "> addition).
 
 ## Requirements
 - `Selenium`
